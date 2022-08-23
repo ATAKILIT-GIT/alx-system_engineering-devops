@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-# Prints a "clock" out to the console
-
-hours=0
-while [[  $hours -lt 13  ]]; do
-	echo "Hour: $hours"
-	minutes=1
-	while [[  $minutes -lt 60  ]]; do
-		echo $minutes
-		(( minutes++))
+# Displays time for 12 hours and 59 minutes
+hour_counter=0
+while [ $hour_counter -lt 13 ]; do
+	echo "Hour: $hour_counter"
+	min_counter=0
+	while [ $min_counter -lt 59 ]; do
+		(( min_counter+=1 ))
+		echo "$min_counter"
 	done
-	(( hours++ ))
+	(( hour_counter+=1 ))
 done

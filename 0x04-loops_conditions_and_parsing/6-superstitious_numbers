@@ -1,25 +1,17 @@
 #!/usr/bin/env bash
-# Simple script that prints the number from 1 to 20 using a while loop and:
-# bad luck from China in the 4th iteration.
-# bad luck from Japan in the 9th iteration.
-# bad luck from Italy in the 17th iteration.
-
-COUNTER=1
-while [ $COUNTER -ne 21 ]
-do
-    echo $COUNTER
-
-    case "$COUNTER" in
-        4)
-            echo "bad luck from China"
-        ;;
-        9)
-            echo "bad luck from Japan"
-        ;;
-        17)
-            echo "bad luck from Italy"
-        ;;
-    esac
-
-    COUNTER=$((COUNTER + 1))
+# display numbers from 1 to 20 using while and case statement and prints badluck from various countries
+counter=0
+while [ $counter -lt 20 ]; do
+	(( counter+=1 ))
+	echo "$counter"
+	case $counter in
+		4 )
+			echo "bad luck from China"
+		;;
+		9 )
+			echo "bad luck from Japan"
+		;;
+		17 )
+			echo "bad luck from Italy"
+	esac
 done

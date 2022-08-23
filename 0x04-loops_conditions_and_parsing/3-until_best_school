@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-# displays Best School 10 times.
-
-COUNTER=10
-until [ $COUNTER -lt 1 ]
-do
-    echo "Best School"
-    let COUNTER-=1
-done
+# Displays 'Holberton School 10 times using until
+string_a='Best School'
+counter=10
+until [ $counter -lt 1 ]; do echo "$string_a"; (( counter-=1 )); done
