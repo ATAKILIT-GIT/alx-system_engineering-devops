@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Displays "To infinity and beyond" indefinitely
+# Don't stop me now
 
-while true; do
-      echo "To infinity and beyond"
-      sleep 2
-      kill "$(pgrep -f "4-to_infinity_and_beyond")"
-done
+pgrep -f 4-to_infinity_and_beyond | xargs kill
