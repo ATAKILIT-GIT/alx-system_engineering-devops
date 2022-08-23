@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# Lists PID of this process
+# my pid
 
-echo $$
+sleep 5 &
+echo "$!"
